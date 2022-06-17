@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 const Todolist = ({todos,setTodos,setEditTodo}) => {
 
-    const handleComplete = ({todo}) => {
+    const handleComplete = (todo) => {
         setTodos(todos.map((item) => {
             if(item.id === todo.id){
             return{...item, completed : !item.completed};
