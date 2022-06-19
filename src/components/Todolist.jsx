@@ -23,14 +23,14 @@ const Todolist = ({todos,setTodos,setEditTodo}) => {
 
 
   return (
-    <div>
+    <div className="scrolltodolist">
         {todos.map((todo)=> (
         <li className="list-item" key={todo.id}>
             <input type="text" 
             className={`list ${todo.completed ? "complete" : ""}`} 
             value={todo.title} 
             onChange={(event) => event.preventDefault()}/>
-            <div>
+            <div className="icon">
                 <button className="button-complete task-button" onClick={() => handleComplete(todo)}>
                     <i className="fa fa-check-circle"></i>
                 </button>
