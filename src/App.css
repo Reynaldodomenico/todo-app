@@ -4,10 +4,12 @@
   box-sizing: border-box;
 }
 
+body{
+  background: linear-gradient(to right bottom, #4f74c4, #6e6cf0); 
+}
+
 .container{
-  background: linear-gradient(to right bottom, #4f74c4, #6e6cf0);
-  width: 100%;
-  min-height: 100vh;
+  margin: 4% auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,10 +17,9 @@
 
 .app-wrapper{
   background-color: #497e8a;
-  min-width: 450px;
-  min-height: 650px;
+  min-width: 26em;
+  min-height: 40em;
   padding: 30px;
-  box-sizing: border-box;
   border-radius: 10px;
   box-shadow: 3px 6px 40px #000;
   margin-bottom: 10px;
@@ -58,7 +59,6 @@
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 10px;
-
 }
 
 .button-complete, .button-delete, .button-edit{
@@ -77,12 +77,11 @@
 
 .button-edit{
   color: #e9e8de;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .button-delete{
   color: rgb(16, 18, 19);
-  margin-right: 10px;
 }
 
 .complete{
@@ -103,10 +102,15 @@ left: 3px;
   border: none;
   color: #ccc;
   font-size: 15px;
-  padding-left: 10px;
+  padding: 10px;
   margin-right: 15px;
-  overflow-wrap: break-word;
   border-radius: 10px;
+  overflow: auto;
+  height : 50px;
+}
+
+textarea{
+  resize: none;
 }
 
 input:focus, button:focus{
@@ -138,22 +142,30 @@ input:focus, button:focus{
   background: #555; 
 }
 
+.todoform{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
 
 @media (max-width: 450px) {
-  .app-wrapper{
-    background-color: #497e8a;
-    min-width: 100px;
-    min-height: 250px;
-    padding: 0;
-    box-sizing: border-box;
-    border-radius: 10px;
-    box-shadow: 3px 6px 40px #000;
-    margin-bottom: 10px;
-  }
 
+  .app-wrapper{  
+    margin-top: 5%;  
+    min-width: 6em;
+    min-height: 6em;  
+    padding: 1em;
+  }
+  
   .task-input{
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .icon i{
+    font-size: 1em;
   }
 }
