@@ -26,7 +26,7 @@ const Todolist = ({todos,setTodos,setEditTodo}) => {
     <div className="scrolltodolist">
         {todos.map((todo)=> (
         <li className="list-item" key={todo.id}>
-            <input type="text" 
+            <textarea type="text" 
             className={`list ${todo.completed ? "complete" : ""}`} 
             value={todo.title} 
             onChange={(event) => event.preventDefault()}/>
